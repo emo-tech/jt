@@ -2,6 +2,7 @@ package com.sher.rabbit.controller;
 
 import cn.hutool.core.thread.ThreadUtil;
 import com.sher.rabbit.bean.Result;
+import com.sher.rabbit.work.DirectSender;
 import com.sher.rabbit.work.FanoutSender;
 import com.sher.rabbit.work.SimpleSender;
 import com.sher.rabbit.work.WorkSender;
@@ -28,6 +29,8 @@ public class RabbitController {
     private WorkSender workSender;
     @Autowired
     private FanoutSender fanoutSender;
+    @Autowired
+    private DirectSender directSender;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello() {
@@ -60,6 +63,16 @@ public class RabbitController {
         for (int i =0; i< 10; i++) {
             fanoutSender.send(i);
             ThreadUtil.sleep(1000);
+        }
+        return Result.success(null);
+    }
+
+    @ApiOperation("路由模式")
+    @RequestMapping(value = "/direct", method = RequestMethod.GET)
+    public Result directTest() {
+        for (int i=0; i<10; i++) {
+            directSender.send(i);
+            ThreadUtil.sleep(10000);
         }
         return Result.success(null);
     }
