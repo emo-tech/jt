@@ -5,6 +5,7 @@
   <packaging>pom</packaging>
   <modules>
     <module>jt.rabbitmq</module>
+    <module>jt.redis</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
