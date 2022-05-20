@@ -6,6 +6,7 @@
   <modules>
     <module>jt.rabbitmq</module>
     <module>jt.redis</module>
+    <module>jt.websocket</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
