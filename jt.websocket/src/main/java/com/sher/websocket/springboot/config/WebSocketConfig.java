@@ -1,6 +1,6 @@
-package com.sher.websocket;
+package com.sher.websocket.springboot.config;
 
-import org.springframework.beans.factory.annotation.Configurable;
+import com.sher.websocket.EchoTextWebSocketHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.WebSocketHandler;
@@ -28,4 +28,5 @@ public class WebSocketConfig implements WebSocketConfigurer {
     public WebSocketHandler echoHandler() {
         return new EchoTextWebSocketHandler();
     }
+
 }
