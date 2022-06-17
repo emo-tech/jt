@@ -10,6 +10,9 @@
     <module>jt-websocket</module>
     <module>jt-common</module>
     <module>jt-redis</module>
+      <module>jt-annotation</module>
+      <module>jt-springboot</module>
+      <module>jt-test</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -42,7 +45,14 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -85,7 +95,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
 
   <build>
     <resources>
