@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>jt-test-HttpServletRequestWrapper</module>
+        <module>jt-test-aop</module>
     </modules>
 
     <properties>
