@@ -16,6 +16,11 @@ public class AopTest {
         AnnotationConfigApplicationContext configApplicationContext = new AnnotationConfigApplicationContext(AopConfig.class);
         log.debug("bean定义个数: [{}]", configApplicationContext.getBeanDefinitionCount());
 
+        String[] beanNames = configApplicationContext.getBeanDefinitionNames();
+        for (String beanName : beanNames) {
+            log.debug("bean名称: [{}]", beanName);
+        }
+
         MathService mathService = configApplicationContext.getBean(MathService.class);
         mathService.add(1,2);
 
