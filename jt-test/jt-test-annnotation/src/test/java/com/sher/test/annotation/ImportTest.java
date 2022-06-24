@@ -1,7 +1,7 @@
 package com.sher.test.annotation;
 
 import com.sher.test.annotation.import_test.AppConfig;
-import com.sher.test.annotation.import_test.User;
+import com.sher.test.annotation.common.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

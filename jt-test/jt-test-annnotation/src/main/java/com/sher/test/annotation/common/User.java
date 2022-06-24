@@ -1,4 +1,4 @@
-package com.sher.test.annotation.import_test;
+package com.sher.test.annotation.common;
 
 import lombok.extern.slf4j.Slf4j;
 
