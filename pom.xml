@@ -6,7 +6,6 @@
   <modules>
     <module>jt.rabbitmq</module>
     <module>jt.redis</module>
-    <module>jt.websocket</module>
     <module>jt-websocket</module>
     <module>jt-common</module>
     <module>jt-redis</module>

@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>jt-websocket-tomcat</module>
-        <module>jt-websocket-springboot</module>
+        <module>jt-websocket-spring</module>
     </modules>
 
     <dependencies>
