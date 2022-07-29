@@ -14,5 +14,7 @@ public class ServletTest extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doGet(req, resp);
+
+        String utf8 = "UTF-8";
     }
 }
