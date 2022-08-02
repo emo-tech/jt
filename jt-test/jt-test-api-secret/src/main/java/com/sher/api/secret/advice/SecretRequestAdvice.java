@@ -1,6 +1,5 @@
 package com.sher.api.secret.advice;
 
-import cn.hutool.crypto.SecureUtil;
 import cn.hutool.json.JSONUtil;
 import com.sher.api.secret.bean.RequestSecret;
 import com.sher.api.secret.constant.Constants;
@@ -8,6 +7,8 @@ import com.sher.api.secret.constant.ResponseCode;
 import com.sher.api.secret.exception.ResultException;
 import com.sher.api.secret.filter.SecretFilter;
 import com.sher.api.secret.http.SecretHttpMessage;
+import com.sher.api.secret.util.EncryptUtils;
+import com.sher.api.secret.util.Md5Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Order;
@@ -80,13 +81,22 @@ public class SecretRequestAdvice extends RequestBodyAdviceAdapter {
         String data = requestSecret.getData();
         String newSignature = "";
         if (!StringUtils.hasLength(signature)) {
-            newSignature = SecureUtil.md5(timestamp + salt + data + signature);
+            newSignature = Md5Utils.genSignature(timestamp + salt + data + privateKey);
         }
         if (!newSignature.equals(signature)) {
             // 验签失败
-            throw new ResultException(ResponseCode.SECRET_SIGNATRUE_ERROR.getCode(), ResponseCode.SECRET_SIGNATRUE_ERROR.getErrorMessage());
+            throw new ResultException(ResponseCode.SECRET_SIGNATURE_ERROR.getCode(), ResponseCode.SECRET_SIGNATURE_ERROR.getErrorMessage());
         }
-        // todo
-        return "";
+
+        try {
+            String decrypt = EncryptUtils.aesDecrypt(data, privateKey);
+            if (!StringUtils.hasLength(decrypt)) {
+                decrypt = "{}";
+            }
+            return decrypt;
+        } catch (Exception e) {
+            log.error("", e);
+        }
+        throw new ResultException(ResponseCode.SECRET_DECRYPT_ERROR.getCode(), ResponseCode.SECRET_DECRYPT_ERROR.getErrorMessage());
     }
 }

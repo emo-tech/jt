@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./api-secret.log</file>
+		<encoder>
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS} ${PID:-} [%t] %-5p %logger{64}[%line] - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+<!--				%d{yyyy-MM-dd HH:mm:ss.SSS} ${APP_ENV}-${APP_NAME} ${PID:-} [%t] %-5p %logger{64}[%line] - %msg%n-->
+				%red(%date{yyyy-MM-dd HH:mm:ss.SSS}) ${APP_ENV}-${APP_NAME} ${PID:-} %highlight(%-8level) %red([%thread]) %boldMagenta(%logger{50}) %cyan(%msg%n)
+			</Pattern>
+		</layout>
+	</appender>
+
+
+	<root level="ALL">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>

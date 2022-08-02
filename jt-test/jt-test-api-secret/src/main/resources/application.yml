@@ -5,5 +5,5 @@ spring:
 
 secret:
   privateKey:
-    h5: sherxia
-    default: sherxia92
+    h5: 1234567890abcedf
+    default: abcedf1234567890
