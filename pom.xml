@@ -5,12 +5,12 @@
   <packaging>pom</packaging>
   <modules>
     <module>jt.rabbitmq</module>
-    <module>jt.redis</module>
     <module>jt-websocket</module>
     <module>jt-common</module>
     <module>jt-redis</module>
     <module>jt-springboot</module>
     <module>jt-test</module>
+    <module>jt-jvm</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
