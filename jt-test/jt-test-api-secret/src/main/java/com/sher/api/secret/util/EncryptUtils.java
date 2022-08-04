@@ -40,13 +40,13 @@ public class EncryptUtils {
     }
 
     public static String aesDecryptByBytes(byte[] encryptBytes, String decryptKey) throws Exception {
-        byte[] raw = decryptKey.getBytes();
+        byte[] raw = decryptKey.getBytes(StandardCharsets.UTF_8);
         SecretKeySpec secretKeySpec = new SecretKeySpec(raw, "AES");
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         IvParameterSpec ivParameterSpec = new IvParameterSpec(IV.getBytes());
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
         byte[] decryptBytes = cipher.doFinal(encryptBytes);
-        return new String(decryptBytes);
+        return new String(decryptBytes, StandardCharsets.UTF_8);
     }
 
     public static String aesEncrypt(String content, String encryptKey) throws Exception {

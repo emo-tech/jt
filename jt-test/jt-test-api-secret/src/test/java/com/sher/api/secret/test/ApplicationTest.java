@@ -18,10 +18,19 @@ public class ApplicationTest {
 
     @Test
     public void decryptResponseData() throws Exception {
-        String encryptString = "BZphXKR35/p9iqelT/S68CuGxLPKdxMc2/ABA/J+jJGbk9T0d585Ers9hYAK6mspAwO///SCVG+m3zAmbmTcUqH9RBm/m9zGKqTvu/tkO3IZ8EdH+Z2+b0NVSsPkoXmyyGelgvonZXd0coLhEs4ksqSmamf8HgNALlJGmKVy/A9LtwmxzQi53vfMK6/Dlihu8LjcOsNY/C2f9KdHMTckZRvMkVw6Faend24BnTl/nkXHDqA8Bt5ZgeBTV8CJAbkfrVZKXcbPcDbsqDhDnhExUA==";
+        String encryptString = "sherxia92#Letmein_2022&20220804174450";
         String decryptKey = defaultKey;
         String decryptString = EncryptUtils.aesDecrypt(encryptString, decryptKey);
         log.debug("decryptString: {}", decryptString);
         log.debug("解密");
+    }
+
+    @Test
+    public void encryptResponseData() throws Exception {
+        String str = "sherxia92#Letmein_2022&20220804174450";
+        String decryptKey = defaultKey;
+        String cryptString = EncryptUtils.aesDecrypt(str, decryptKey);
+        log.debug("cryptString: {}", cryptString);
+        log.debug("加密");
     }
 }
