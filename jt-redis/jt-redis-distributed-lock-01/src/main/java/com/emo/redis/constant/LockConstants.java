@@ -1,4 +1,4 @@
-package com.sher.redis.lock.constant;
+package com.emo.redis.constant;
 
 import lombok.extern.slf4j.Slf4j;
 

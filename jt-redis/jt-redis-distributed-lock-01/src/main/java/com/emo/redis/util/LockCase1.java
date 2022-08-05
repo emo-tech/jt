@@ -1,4 +1,4 @@
-package com.sher.redis.lock.util;
+package com.emo.redis.util;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.SetParams;

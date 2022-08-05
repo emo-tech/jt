@@ -1,4 +1,4 @@
-package com.sher.redis.lock.util;
+package com.emo.redis.util;
 
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
