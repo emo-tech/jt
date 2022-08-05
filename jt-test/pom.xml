@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>jt</artifactId>
-        <groupId>com.sher</groupId>
+        <groupId>com.emo</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,6 +14,7 @@
     <modules>
         <module>jt-test-HttpServletRequestWrapper</module>
         <module>jt-test-aop</module>
+        <module>jt-test-transactional</module>
         <module>jt-test-basic</module>
         <module>jt-test-thread</module>
         <module>jt-test-basicSyntax</module>

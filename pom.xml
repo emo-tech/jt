@@ -8,9 +8,12 @@
     <module>jt-websocket</module>
     <module>jt-common</module>
     <module>jt-redis</module>
+    <module>jt-spring</module>
     <module>jt-springboot</module>
     <module>jt-test</module>
     <module>jt-jvm</module>
+    <module>jt-spring/jt-spring-refresh</module>
+    <module>jt-log</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -18,7 +21,7 @@
     <version>2.6.9</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
-  <groupId>com.sher</groupId>
+  <groupId>com.emo</groupId>
   <artifactId>jt</artifactId>
   <version>1.0.0</version>
   <name>jt</name>
@@ -46,6 +49,10 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-aop</artifactId>
     </dependency>
     <dependency>
@@ -59,6 +66,19 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+
+    <!-- druid -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+    </dependency>
+
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
     </dependency>
 
     <!-- lombok -->
@@ -98,8 +118,13 @@
     <dependencies>
       <dependency>
         <artifactId>jt-common-core</artifactId>
-        <groupId>com.sher</groupId>
+        <groupId>com.emo</groupId>
         <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
