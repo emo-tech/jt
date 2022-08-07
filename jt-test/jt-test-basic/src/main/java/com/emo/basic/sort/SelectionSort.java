@@ -1,4 +1,4 @@
-package com.sher.basic.sort;
+package com.emo.basic.sort;
 
 public class SelectionSort {
 }

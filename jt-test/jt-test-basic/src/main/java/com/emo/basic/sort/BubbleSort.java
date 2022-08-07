@@ -1,4 +1,4 @@
-package com.sher.basic.sort;
+package com.emo.basic.sort;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

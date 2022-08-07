@@ -16,4 +16,11 @@ public class RedisLock01 {
     public Boolean tryLock(String key, String value, long timeout, TimeUnit unit) {
         return redisTemplate.opsForValue().setIfAbsent(key, value, timeout, unit);
     }
+
+    public void unlock(String lockName, String uuid) {
+        if (uuid.equals(redisTemplate.opsForValue().get(lockName))) {
+            redisTemplate.opsForValue().getAndDelete(lockName);
+        }
+    }
+
 }

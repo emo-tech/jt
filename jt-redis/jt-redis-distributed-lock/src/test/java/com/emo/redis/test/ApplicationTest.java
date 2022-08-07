@@ -19,6 +19,12 @@ public class ApplicationTest {
 
     @Test
     public void addData() {
-        redisTemplate.opsForValue().setIfAbsent("name", "sher", 30, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().setIfAbsent("name", "sher", 100, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void getData() {
+        Object obj = redisTemplate.opsForValue().get("name");
+        log.debug("{}", "123");
     }
 }
