@@ -12,7 +12,8 @@
     <module>jt-springboot</module>
     <module>jt-test</module>
     <module>jt-jvm</module>
-    <module>jt-spring/jt-spring-refresh</module>
+    <module>jt-thread</module>
+    <module>jt-lock</module>
     <module>jt-log</module>
   </modules>
   <parent>
@@ -112,12 +113,23 @@
       <version>2.11.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.openjdk.jol</groupId>
+      <artifactId>jol-core</artifactId>
+      <version>0.16</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <artifactId>jt-common-core</artifactId>
+        <groupId>com.emo</groupId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <artifactId>jt-common-mbg</artifactId>
         <groupId>com.emo</groupId>
         <version>${project.version}</version>
       </dependency>

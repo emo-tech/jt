@@ -8,12 +8,8 @@
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jt-spring</artifactId>
-    <packaging>pom</packaging>
 
-    <modules>
-        <module>jt-spring-refresh</module>
-    </modules>
+    <artifactId>jt-thread</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
