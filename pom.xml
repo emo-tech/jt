@@ -121,7 +121,7 @@
       <version>0.16</version>
     </dependency>
 
-    <!-- bug-fixes -->   -->
+    <!-- bug-fixes -->
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
