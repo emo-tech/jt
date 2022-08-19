@@ -14,7 +14,7 @@
   </parent>
 
   <groupId>com.emo</groupId>
-  <artifactId>jt-springboot-alibaba</artifactId>
+  <artifactId>jt-springcloud-alibaba</artifactId>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
