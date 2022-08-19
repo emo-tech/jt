@@ -7,9 +7,11 @@
     <module>jt.rabbitmq</module>
     <module>jt-websocket</module>
     <module>jt-common</module>
+	<module>jt-keywords</module>
     <module>jt-redis</module>
     <module>jt-spring</module>
     <module>jt-springboot</module>
+    <module>jt-springboot-alibaba</module>
     <module>jt-test</module>
     <module>jt-jvm</module>
     <module>jt-thread</module>
@@ -138,13 +140,13 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <artifactId>jt-common-core</artifactId>
         <groupId>com.emo</groupId>
+        <artifactId>jt-common-core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <artifactId>jt-common-mbg</artifactId>
         <groupId>com.emo</groupId>
+        <artifactId>jt-common-mbg</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
