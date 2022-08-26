@@ -17,6 +17,7 @@
     <module>jt-thread</module>
     <module>jt-lock</module>
     <module>jt-log</module>
+    <module>jt-rabbitmq</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
