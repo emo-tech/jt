@@ -1,4 +1,4 @@
-package com.emo.rabbit;
+package com.emo.rabbit.consumer;
 
 import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,7 @@ import java.io.IOException;
  * @author sherxia92
  */
 @Slf4j
-public class ConsumerTest {
+public class StockConsumerTest01 {
 
     public static void main(String[] args) throws Exception {
         // 创建 connectFactory
@@ -25,7 +25,7 @@ public class ConsumerTest {
 
         // 创建channel
         Channel channel = connection.createChannel();
-        String queue = "pay_queue";
+        String queue = "stock_queue";
         channel.queueDeclare(queue, true, false, false, null);
 
         channel.basicConsume(queue, true, new DefaultConsumer(channel) {
@@ -40,12 +40,12 @@ public class ConsumerTest {
              */
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-                log.debug("consumerTag: {}", consumerTag);
-                log.debug("envelope: {}", envelope);
-                log.debug("envelope.exchange: {}", envelope.getExchange());
-                log.debug("envelope.routeKey: {}", envelope.getRoutingKey());
-                log.debug("properties: {}", properties);
-                log.debug("body: {}", new String(body));
+//                log.debug("consumerTag: {}", consumerTag);
+//                log.debug("envelope: {}", envelope);
+//                log.debug("envelope.exchange: {}", envelope.getExchange());
+//                log.debug("envelope.routeKey: {}", envelope.getRoutingKey());
+//                log.debug("properties: {}", properties);
+                log.debug("stock01 consumer body: {}", new String(body));
             }
         });
     }

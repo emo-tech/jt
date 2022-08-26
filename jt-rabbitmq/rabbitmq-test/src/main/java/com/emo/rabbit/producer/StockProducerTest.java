@@ -1,4 +1,4 @@
-package com.emo.rabbit;
+package com.emo.rabbit.producer;
 
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
@@ -12,7 +12,7 @@ import java.util.Map;
  * @author sherxia92
  */
 @Slf4j
-public class ProducerTest {
+public class StockProducerTest {
 
     public static void main(String[] args) throws Exception {
         // 1.创建连接工厂
@@ -33,7 +33,7 @@ public class ProducerTest {
 
         // 5.暂时不用交换机， 直接申明一个队列
         // 队列名称
-        String queue = "pay_queue";
+        String queue = "stock_queue";
         // 是否持久化， 重启后不丢失
         boolean durable = true;
         // 是否独占： 只有一个消息能监听队列 ； connection关闭是是否删除队列
@@ -49,8 +49,10 @@ public class ProducerTest {
         // 路由key， 交换机绑定到队列，routeKey和queue名一样，会自动绑定过去
         String routingKey = queue;
         AMQP.BasicProperties props = null;
-        String body = "hello sher, it's my mq";
-        channel.basicPublish(exchange, routingKey, props, body.getBytes());
+        for (int i = 0; i < 100; i++) {
+            String body = i +  " --- hello sher, it's my mq";
+            channel.basicPublish(exchange, routingKey, props, body.getBytes());
+        }
 
         // 7.释放资源
         channel.close();

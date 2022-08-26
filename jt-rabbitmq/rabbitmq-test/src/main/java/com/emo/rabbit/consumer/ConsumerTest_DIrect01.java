@@ -1,4 +1,4 @@
-package com.emo.rabbit;
+package com.emo.rabbit.consumer;
 
 import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,7 @@ import java.io.IOException;
  * @author sherxia92
  */
 @Slf4j
-public class ConsumerTest_PubSub01 {
+public class ConsumerTest_DIrect01 {
 
     public static void main(String[] args) throws Exception {
         // 创建 connectFactory
@@ -27,12 +27,12 @@ public class ConsumerTest_PubSub01 {
         Channel channel = connection.createChannel();
 
         // 创建exchange
-        String exchange = "exchange_fanout";
-        channel.exchangeDeclare(exchange, BuiltinExchangeType.FANOUT, true);
+        String exchange = "exchange_direct";
+        channel.exchangeDeclare(exchange, BuiltinExchangeType.DIRECT, true);
 
         // 声明queue
-        String queue1 = "queue_fanout_1";
-        String queue2 = "queue_fanout_2";
+        String queue1 = "queue_direct_1";
+        String queue2 = "queue_direct_2";
         channel.queueDeclare(queue1, true, false, false, null);
 
         channel.basicConsume(queue1, true, new DefaultConsumer(channel) {

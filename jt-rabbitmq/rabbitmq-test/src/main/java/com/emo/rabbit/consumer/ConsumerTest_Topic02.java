@@ -1,4 +1,4 @@
-package com.emo.rabbit;
+package com.emo.rabbit.consumer;
 
 import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,7 @@ import java.io.IOException;
  * @author sherxia92
  */
 @Slf4j
-public class StockConsumerTest02 {
+public class ConsumerTest_Topic02 {
 
     public static void main(String[] args) throws Exception {
         // 创建 connectFactory
@@ -25,10 +25,17 @@ public class StockConsumerTest02 {
 
         // 创建channel
         Channel channel = connection.createChannel();
-        String queue = "stock_queue";
-        channel.queueDeclare(queue, true, false, false, null);
 
-        channel.basicConsume(queue, true, new DefaultConsumer(channel) {
+        // 创建exchange
+        String exchange = "exchange_topic";
+        channel.exchangeDeclare(exchange, BuiltinExchangeType.TOPIC, true);
+
+        // 声明queue
+        String queue1 = "queue_topic_1";
+        String queue2 = "queue_topic_2";
+        channel.queueDeclare(queue2, true, false, false, null);
+
+        channel.basicConsume(queue2, true, new DefaultConsumer(channel) {
 
             /**
              * 消费消息的回掉
@@ -40,12 +47,7 @@ public class StockConsumerTest02 {
              */
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-//                log.debug("consumerTag: {}", consumerTag);
-//                log.debug("envelope: {}", envelope);
-//                log.debug("envelope.exchange: {}", envelope.getExchange());
-//                log.debug("envelope.routeKey: {}", envelope.getRoutingKey());
-//                log.debug("properties: {}", properties);
-                log.debug("stock01 consumer body: {}", new String(body));
+                log.debug("{} consumer body: {}", queue2, new String(body));
             }
         });
     }

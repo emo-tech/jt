@@ -1,4 +1,4 @@
-package com.emo.rabbit;
+package com.emo.rabbit.consumer;
 
 import com.rabbitmq.client.*;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +9,7 @@ import java.io.IOException;
  * @author sherxia92
  */
 @Slf4j
-public class StockConsumerTest01 {
+public class StockConsumerTest02 {
 
     public static void main(String[] args) throws Exception {
         // 创建 connectFactory
