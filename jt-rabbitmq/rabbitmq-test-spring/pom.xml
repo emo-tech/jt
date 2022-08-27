@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jt</artifactId>
+        <artifactId>jt-rabbitmq</artifactId>
         <groupId>com.emo</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jt-rabbitmq</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>rabbitmq-producer</module>
-        <module>rabbitmq-consumer</module>
-        <module>rabbitmq-test</module>
-        <module>rabbitmq-test-spring</module>
-        <module>rabbitmq-test-springboot</module>
-    </modules>
+    <artifactId>rabbitmq-test-spring</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -25,10 +17,10 @@
     </properties>
 
     <dependencies>
-        <!--Spring AMQP依赖-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
     </dependencies>
 </project>
