@@ -1,4 +1,4 @@
-package com.sher.rabbit.work;
+package com.emo.rabbitmq.work;
 
 import cn.hutool.core.thread.ThreadUtil;
 import lombok.extern.slf4j.Slf4j;

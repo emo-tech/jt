@@ -1,11 +1,11 @@
-package com.sher.rabbit.controller;
+package com.emo.rabbitmq.controller;
 
 import cn.hutool.core.thread.ThreadUtil;
-import com.sher.rabbit.bean.Result;
-import com.sher.rabbit.work.DirectSender;
-import com.sher.rabbit.work.FanoutSender;
-import com.sher.rabbit.work.SimpleSender;
-import com.sher.rabbit.work.WorkSender;
+import com.emo.rabbitmq.bean.Result;
+import com.emo.rabbitmq.work.DirectSender;
+import com.emo.rabbitmq.work.FanoutSender;
+import com.emo.rabbitmq.work.SimpleSender;
+import com.emo.rabbitmq.work.WorkSender;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

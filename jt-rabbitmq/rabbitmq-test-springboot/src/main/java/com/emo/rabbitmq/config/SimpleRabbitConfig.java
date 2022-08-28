@@ -1,7 +1,7 @@
-package com.sher.rabbit.config;
+package com.emo.rabbitmq.config;
 
-import com.sher.rabbit.work.SimpleReceiver;
-import com.sher.rabbit.work.SimpleSender;
+import com.emo.rabbitmq.work.SimpleReceiver;
+import com.emo.rabbitmq.work.SimpleSender;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

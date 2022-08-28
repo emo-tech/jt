@@ -1,7 +1,7 @@
-package com.sher.rabbit.config;
+package com.emo.rabbitmq.config;
 
-import com.sher.rabbit.work.FanoutReceiver;
-import com.sher.rabbit.work.FanoutSender;
+import com.emo.rabbitmq.work.FanoutReceiver;
+import com.emo.rabbitmq.work.FanoutSender;
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

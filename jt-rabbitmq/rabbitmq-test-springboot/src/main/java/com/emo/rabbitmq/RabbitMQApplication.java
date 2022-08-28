@@ -1,8 +1,11 @@
-package com.sher.rabbit;
+package com.emo.rabbitmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author sherxia92
+ */
 @SpringBootApplication
 public class RabbitMQApplication {
 

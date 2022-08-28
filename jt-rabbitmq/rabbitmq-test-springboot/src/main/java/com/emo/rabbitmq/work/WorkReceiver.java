@@ -1,4 +1,4 @@
-package com.sher.rabbit.work;
+package com.emo.rabbitmq.work;
 
 import cn.hutool.core.date.StopWatch;
 import cn.hutool.core.thread.ThreadUtil;

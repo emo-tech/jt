@@ -1,4 +1,4 @@
-package com.sher.rabbit.bean;
+package com.emo.rabbitmq.bean;
 
 import lombok.Getter;
 import lombok.Setter;
