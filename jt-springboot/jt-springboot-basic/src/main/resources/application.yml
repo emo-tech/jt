@@ -1,0 +1,6 @@
+server:
+  port: 5001
+  
+crypt:
+  sh1: false
+  aes: true
