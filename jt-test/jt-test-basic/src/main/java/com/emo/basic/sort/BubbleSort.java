@@ -1,7 +1,6 @@
 package com.emo.basic.sort;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
@@ -29,7 +28,6 @@ public class BubbleSort {
     /**
      * 未经优化
      */
-    @Test
     public static void binarySearch_01() {
         int[] array = Arrays.copyOf(arrayOriginal, arrayOriginal.length);
         log.debug("当前数组: [{}], 长度: [{}]", array, array.length);
@@ -45,7 +43,6 @@ public class BubbleSort {
         log.debug("result: [{}]", array);
     }
 
-    @Test
     public static void binarySearch_02() {
         int[] array = Arrays.copyOf(arrayOriginal, arrayOriginal.length);
         log.debug("当前数组: [{}], 长度: [{}]", array, array.length);
@@ -61,7 +58,6 @@ public class BubbleSort {
         log.debug("result: [{}]", array);
     }
 
-    @Test
     public static void binarySearch_03() {
         int[] array = Arrays.copyOf(arrayOriginal, arrayOriginal.length);
         log.debug("当前数组: [{}], 长度: [{}]", array, array.length);
@@ -82,7 +78,6 @@ public class BubbleSort {
         log.debug("result: [{}]", array);
     }
 
-    @Test
     public static void binarySearch_04() {
         int[] array = Arrays.copyOf(arrayOriginal, arrayOriginal.length);
         log.debug("当前数组: [{}], 长度: [{}]", array, array.length);
@@ -106,8 +101,7 @@ public class BubbleSort {
         log.debug("result: [{}]", array);
     }
 
-    @Test
-    public void run() {
+    public static void main(String[] args) {
         log.debug("\n\nbinarySearch_01====================");
         binarySearch_01();
         log.debug("\n\nbinarySearch_02====================");
