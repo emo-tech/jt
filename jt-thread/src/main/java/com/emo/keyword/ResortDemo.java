@@ -38,13 +38,11 @@ public class ResortDemo {
         Set<Object> set = new HashSet<>();
         ResortDemo resortDemo = new ResortDemo();
 
-        resortDemo
-
         for (int i = 0; i < 20; i++) {
             new Thread(() -> {
                 for (int j = 0; j < 1000; j++) {
                     resortDemo.doMethod();
-                    set.add(resortDemo.number);
+//                    set.add(resortDemo.number);
                 }
             }, String.valueOf(i)).start();
         }
