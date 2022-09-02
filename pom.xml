@@ -18,6 +18,7 @@
     <module>jt-log</module>
     <module>jt-rabbitmq</module>
     <module>jt-mybatis</module>
+    <module>jt-mybatis/jt-mybatis-plugin</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
