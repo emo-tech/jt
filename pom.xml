@@ -6,7 +6,7 @@
   <modules>
     <module>jt-websocket</module>
     <module>jt-common</module>
-	<module>jt-keywords</module>
+	  <module>jt-keywords</module>
     <module>jt-redis</module>
     <module>jt-spring</module>
     <module>jt-springboot</module>
@@ -17,6 +17,7 @@
     <module>jt-lock</module>
     <module>jt-log</module>
     <module>jt-rabbitmq</module>
+    <module>jt-mybatis</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
