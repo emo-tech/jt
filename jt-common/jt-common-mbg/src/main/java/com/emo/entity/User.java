@@ -21,4 +21,9 @@ public class User implements Serializable {
 
     private String username;
     private transient String password;
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
