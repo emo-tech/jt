@@ -8,12 +8,15 @@
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>jt-mybatis</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>jt-mybatis-plugin</module>
+        <module>jt-mybatis-generator</module>
+    </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
 </project>
