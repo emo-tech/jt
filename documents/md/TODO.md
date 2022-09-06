@@ -69,6 +69,9 @@ spring aop
 
 spring ioc/di 的源码
 
+ThreadLocal的实现原理
+
+spring自己的容器里有哪些是aop的使用
 
 mysql 锁多行数据（间隙锁）
 
