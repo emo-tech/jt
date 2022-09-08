@@ -8,6 +8,7 @@
     <module>jt-common</module>
     <module>jt-keywords</module>
     <module>jt-redis</module>
+    <module>jt-docker</module>
     <module>jt-spring</module>
     <module>jt-springboot</module>
     <module>jt-springcloud-alibaba</module>
