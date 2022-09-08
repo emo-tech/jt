@@ -33,7 +33,7 @@ Nacos 支持基于 DNS 和基于 RPC 的服务发现
 
 RPC 的服务 是什么？
 
-SpringBoot的自动装配原理
+SpringBoot的自动装配原理 、  SpringBoot启动的原理
 
 
 mysql 索引优化
@@ -54,6 +54,8 @@ mysql索引优化
 mysql索引失效
 
 mybatis # $
+
+mybatis-plus 如何进行mybatis的增强
 
 spring openfein的协议
 
@@ -83,6 +85,8 @@ webpack vite 区别
 
 docker
 
+jvm classpath的原理
+
 
 https://blog.csdn.net/zhinan11/article/details/120969042
 https://www.runoob.com/w3cnote/mysql-index.html
@@ -102,13 +106,30 @@ https://www.runoob.com/w3cnote/mysql-index.html
 ## mysql 索引优化
 
 >
-> Java部分：smith 、 前台及知识库维护（旧版、新版）：mark
 > 
-> 支持springboot， springcloud，tomcat 等方式部署
 > 
-> **使用EliteKM-3.x分支时 必须使用旧版问维护插件** 
 > 
-> **使用EliteKM-主分支 必须使用基于Vue的新版问维护插件**
+> 
+>  
+> 
+> 
 > 
 >
-> 
+
+
+
+
+
+## http有哪些特点
+
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
