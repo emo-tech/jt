@@ -87,15 +87,57 @@ docker
 
 jvm classpath的原理
 
-
 https://blog.csdn.net/zhinan11/article/details/120969042
 https://www.runoob.com/w3cnote/mysql-index.html
-## 索引的优点
+
+
+
+SpringBoot的自动装配原理 、  SpringBoot启动的原理
+
+## SpringBoot
+
+### SpringBoot的自动装配原理
+
+> 是一个JVM环境变量（-cp），用来指示JVM如何找到class。
+>
+> classpath决定搜索class的路径和顺序
+
+
+
+### jvm classloader
+
+> 111
+
+
+
+
+
+## JVM
+
+### jvm classpath
+
+> 是一个JVM环境变量，用来指示JVM如何找到class。
+> 
+
+
+
+### jvm classloader
+
+> 111
+
+
+
+
+
+
+
+
+
+
+
+### 索引的优点
 
 >
-> 大大减少服务器需要扫描的数据量
-> 
-> 支持springboot， springcloud，tomcat 等方式部署
 
 
 
@@ -103,11 +145,11 @@ https://www.runoob.com/w3cnote/mysql-index.html
 
 
 
-## mysql 索引优化
+### mysql 索引优化
 
 >
 > 
-> 
+> 111
 > 
 > 
 >  
@@ -122,14 +164,8 @@ https://www.runoob.com/w3cnote/mysql-index.html
 
 ## http有哪些特点
 
->
->
->
->
->
->
->
->
->
->
->
+>- 灵活可扩展，可以添加头字段信息实现。 （传输的实体数据可缓存可压缩，可以分段获取数据）
+>- 可靠协议传输，基于TCP/IP
+>- 是应用层协议
+>- 使用了请求 - 应答模式
+>- 无状态， 每个请求相互独立
