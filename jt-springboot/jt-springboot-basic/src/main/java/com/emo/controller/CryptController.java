@@ -1,5 +1,6 @@
 package com.emo.controller;
 
+import com.emo.starter.config.EmoBean;
 import com.emo.starter.config.EmoProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,13 @@ public class CryptController {
 
     @Autowired
     private EmoProperties emoProperties;
+    @Autowired
+    private EmoBean emoBean;
 
     @RequestMapping("/emo-starter")
     public String EmoStarter() {
         System.out.println("emoProperties: " + emoProperties.toString());
+        System.out.println("emoBean: " + emoBean.toString());
         log.debug("hello emo starter");
         log.debug("emoProperties: {}", emoProperties);
         return "emo-starter";

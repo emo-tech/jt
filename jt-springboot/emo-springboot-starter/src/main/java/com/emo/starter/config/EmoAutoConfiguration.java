@@ -17,4 +17,9 @@ public class EmoAutoConfiguration {
         log.info("emo properties be created...");
         return new EmoProperties();
     }
+
+    @Bean
+    public EmoBean emoBean() {
+        return new EmoBean("AA", "BB");
+    }
 }
