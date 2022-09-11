@@ -92,21 +92,29 @@ https://www.runoob.com/w3cnote/mysql-index.html
 
 
 
-SpringBoot的自动装配原理 、  SpringBoot启动的原理
+SpringBoot的自动装配原理 、  SpringBoot启动的原理、
+
+
 
 ## SpringBoot
 
 ### SpringBoot的自动装配原理
 
-> 是一个JVM环境变量（-cp），用来指示JVM如何找到class。
+> 自动装配主要是将第三方Bean装载到Spring IOC容器。 不需要开发人员再次手动写装配配置
 >
-> classpath决定搜索class的路径和顺序
+> - 引入的starter组件的时候，这个组件需要包含一个@Configuration注解类，这个类中声明需要装配到 IOC 容器的对象
+> - 这个第三方jar包，需要通过约定的配置，把配置类的全路径写到 spring.factories的文件中 () 。
+>   springboot获取配置类的路径，主要是通过SpringFactoriesLoader
+> - springboot拿到第三方jar声明的配置类后， 通过ImportSelector接口实现配置类的动态加载
 
 
 
-### jvm classloader
+### SpringBoot的 jar可以直接运行
 
-> 111
+> - 首先要一个插件spring-boot-maven-plugin， 打包成一个FAT-jar (jar包中有所有lib)
+> - 通过java -jar 就会根据 manifest.mf 文件清单列表
+> - 加载main-class指定的JarLauncher执行main方法，会创建lodaer（LaunchedURLClassLoader）加载jar包中的jar包
+> - 开启一个新的线程 去加载Start-Class 运行
 
 
 
@@ -135,15 +143,7 @@ SpringBoot的自动装配原理 、  SpringBoot启动的原理
 
 
 
-### 索引的优点
-
->
-
-
-
-
-
-
+## Mysql
 
 ### mysql 索引优化
 
@@ -157,6 +157,26 @@ SpringBoot的自动装配原理 、  SpringBoot启动的原理
 > 
 > 
 >
+
+
+
+### 索引的优点
+
+>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

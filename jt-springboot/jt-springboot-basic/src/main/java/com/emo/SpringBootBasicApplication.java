@@ -22,6 +22,7 @@ import org.springframework.web.client.RestTemplate;
 public class SpringBootBasicApplication {
 
     public static void main(String[] args) {
+//        org.springframework.boot.loader.JarLauncher
         SpringApplication.run(SpringBootBasicApplication.class, args);
     }
 

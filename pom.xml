@@ -43,6 +43,7 @@
     <mybatis-plus.version>3.5.2</mybatis-plus.version>
     <druid.version>1.1.8</druid.version>
     <hutool.version>5.3.10</hutool.version>
+    <spring-boot.version>2.7.3</spring-boot.version>
     <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
     <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
     <mysql.version>8.0.28</mysql.version>
