@@ -11,19 +11,13 @@
 
     <artifactId>jt-websocket-tomcat</artifactId>
     <packaging>war</packaging>
-
-    <name>jt-websocket-tomcat Maven Webapp</name>
+    <version>1.0.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-
-        <dependency>
-            <groupId>com.emo</groupId>
-            <artifactId>jt-common-core</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.emo</groupId>
             <artifactId>jt-common-core</artifactId>

@@ -34,3 +34,4 @@ build/
 /.mvn/wrapper/
 /logs/
 /jt-test/jt-test-HttpServletRequestWrapper/logs/
+/documents/docker-compompose/cloud-demo/mysql/

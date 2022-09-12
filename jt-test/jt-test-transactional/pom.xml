@@ -8,13 +8,14 @@
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>jt-test-transactional</artifactId>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
             <groupId>com.emo</groupId>
             <artifactId>jt-common-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

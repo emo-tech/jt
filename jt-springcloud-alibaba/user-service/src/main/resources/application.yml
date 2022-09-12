@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 9001
 
 logging:
   level:
@@ -9,8 +9,7 @@ logging:
 
 spring:
   application:
-    name: orderservice
+    name: userservice
   cloud:
     nacos:
       server-addr: localhost:8848
-

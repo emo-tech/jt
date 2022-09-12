@@ -12,7 +12,6 @@
     <module>jt-spring</module>
     <module>jt-springboot</module>
     <module>jt-springcloud-alibaba</module>
-    <module>jt-springcloud-netflix</module>
     <module>jt-test</module>
     <module>jt-jvm</module>
     <module>jt-thread</module>
@@ -20,7 +19,6 @@
     <module>jt-log</module>
     <module>jt-rabbitmq</module>
     <module>jt-mybatis</module>
-    <module>jt-mybatis/jt-mybatis-plugin</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>

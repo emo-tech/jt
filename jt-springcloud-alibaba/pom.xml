@@ -9,6 +9,8 @@
       <module>order-service</module>
       <module>stock-service</module>
       <module>wms-service</module>
+	  <module>user-service</module>
+	  <module>gateway</module>
   </modules>
 
   <groupId>com.emo</groupId>
