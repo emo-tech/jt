@@ -19,6 +19,7 @@
     <module>jt-log</module>
     <module>jt-rabbitmq</module>
     <module>jt-mybatis</module>
+	<module>jt-es</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
