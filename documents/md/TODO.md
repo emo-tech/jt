@@ -35,7 +35,6 @@ RPC 的服务 是什么？
 
 SpringBoot的自动装配原理 、  SpringBoot启动的原理
 
-
 mysql 索引优化
 
 mysql避免索引失效
@@ -65,11 +64,11 @@ autowire为null时怎么排查
 
 分布式事物 超卖
 
-spring transactional
+spring transactional 原理
 
-spring aop
+spring aop 原理
 
-spring ioc/di 的源码
+spring ioc/di 的原理
 
 ThreadLocal的实现原理
 
