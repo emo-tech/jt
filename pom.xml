@@ -48,7 +48,7 @@
     <mysql.version>8.0.28</mysql.version>
     <jedis.version>2.9.0</jedis.version>
     <guava.version>31.1-jre</guava.version>
-    <netty.version>4.1.78.Final</netty.version>
+    <netty.version>4.1.94.Final</netty.version>
   </properties>
 
   <dependencies>
